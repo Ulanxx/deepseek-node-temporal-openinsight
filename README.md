@@ -20,8 +20,6 @@
 ## 安装步骤
 0.  启动 docker：
 ```
-git clone https://github.com/temporalio/docker-compose.git
-cd  docker-compose
 docker-compose up
 ```
 
