@@ -1,0 +1,43 @@
+{
+  "name": "temporal-openinsight",
+  "version": "1.0.0",
+  "description": "A code repository analysis tool using AI and Temporal.io to generate documentation and insights",
+  "main": "dist/index.js",
+  "scripts": {
+    "docker": "docker-compose up",
+    "build": "tsc",
+    "start": "node dist/client/start.js",
+    "start:worker": "node dist/worker/index.js",
+    "dev": "ts-node src/client/start.ts",
+    "dev:worker": "ts-node src/worker/index.ts",
+    "lint": "eslint 'src/**/*.ts'",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "npm run build"
+  },
+  "keywords": ["code-analysis", "ai", "documentation", "temporal"],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.10.0+sha512.d615db246fe70f25dcfea6d8d73dee782ce23e2245e3c4f6f888249fb568149318637dca73c2c5c8ef2a4ca0d5657fb9567188bfab47f566d1ee6ce987815c39",
+  "dependencies": {
+    "@temporalio/client": "^1.11.8",
+    "@temporalio/worker": "^1.11.8",
+    "@temporalio/workflow": "^1.11.8",
+    "dotenv": "^16.5.0",
+    "fs-extra": "^11.3.0",
+    "openai": "^4.100.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20.11.0",
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "@typescript-eslint/parser": "^6.19.0",
+    "eslint": "^8.56.0",
+    "rimraf": "^5.0.5",
+    "tslib": "^2.6.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
